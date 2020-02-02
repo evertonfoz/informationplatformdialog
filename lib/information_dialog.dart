@@ -1,11 +1,8 @@
 import 'dart:io' show Platform;
 
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
-import 'information_cupertino_alert_dialog.dart';
-import 'information_material_alert_dialog.dart';
+import 'package:informationplatformdialog/src/information_cupertino_alert_dialog.dart';
+import 'package:informationplatformdialog/src/information_material_alert_dialog.dart';
 
 class InformationAlertDialog extends StatelessWidget {
   final Icon iconTitle;
