@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:informationplatformdialog/informationplatformdialog.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,9 +32,30 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: _testPackage(),
+      body: Container(),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.blue,
+        child: Icon(Icons.message),
+        elevation: 10,
+        onPressed: () async {
+          await showDialog(
+        barrierDismissible: false,
+        context: context,
+        child: InformationAlertDialog(
+          iconTitle: Icon(
+            Icons.error,
+            color: Colors.red,
+          ),
+          title: 'Não conseguimos',
+          message: 'Conteúdo',
+          buttons: [
+            ActionsFlatButtonToAlertDialog(
+              messageButton: 'OK',
+            )
+          ],
+        ),
+      );
+        }),
     );
   }
-      
-  _testPackage() {}
 }
