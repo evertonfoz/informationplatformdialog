@@ -49,9 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: 'Não conseguimos',
           message: 'Conteúdo',
           buttons: [
-            ActionsFlatButtonToAlertDialog(
-              messageButton: 'OK',
-            )
+            InformationAlertDialog.createFlatButton(messageButton: 'OK'),
           ],
         ),
       );
