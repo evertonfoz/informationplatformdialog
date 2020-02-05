@@ -15,10 +15,10 @@ class InformationAlertDialog extends StatelessWidget {
 
   const InformationAlertDialog({
     this.iconTitle,
-    @required this.title,
+    this.title,
     @required this.message,
     @required this.buttons,
-  });
+  }) : assert(iconTitle != null || title != null);
 
   static Widget createFlatButton(
       {String messageButton,

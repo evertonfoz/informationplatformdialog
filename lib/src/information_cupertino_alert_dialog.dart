@@ -8,7 +8,7 @@ class InformationCupertinoAlertDialog extends StatelessWidget {
 
   const InformationCupertinoAlertDialog({
     this.iconTitle,
-    @required this.title,
+    this.title,
     @required this.message,
     @required this.buttons,
   });
@@ -29,7 +29,11 @@ class InformationCupertinoAlertDialog extends StatelessWidget {
               : SizedBox(
                   width: 0,
                 ),
-          Text(this.title),
+          (this.title != null)
+              ? Text(this.title)
+              : SizedBox(
+                  width: 0,
+                ),
         ],
       ),
       content: Column(

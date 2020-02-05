@@ -34,26 +34,26 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.blue,
-        child: Icon(Icons.message),
-        elevation: 10,
-        onPressed: () async {
-          await showDialog(
-        barrierDismissible: false,
-        context: context,
-        child: InformationAlertDialog(
-          iconTitle: Icon(
-            Icons.error,
-            color: Colors.red,
-          ),
-          title: 'Não conseguimos',
-          message: 'Conteúdo',
-          buttons: [
-            InformationAlertDialog.createFlatButton(messageButton: 'OK'),
-          ],
-        ),
-      );
-        }),
+          backgroundColor: Colors.blue,
+          child: Icon(Icons.message),
+          elevation: 10,
+          onPressed: () async {
+            await showDialog(
+              barrierDismissible: false,
+              context: context,
+              child: InformationAlertDialog(
+                iconTitle: Icon(
+                  Icons.error,
+                  color: Colors.red,
+                ),
+                title: 'Não conseguimos',
+                message: 'Conteúdo',
+                buttons: [
+                  InformationAlertDialog.createFlatButton(messageButton: 'OK'),
+                ],
+              ),
+            );
+          }),
     );
   }
 }
