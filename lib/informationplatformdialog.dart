@@ -17,7 +17,7 @@ class InformationAlertDialog extends StatelessWidget {
     this.iconTitle,
     this.title,
     @required this.message,
-    @required this.buttons,
+    this.buttons,
   }) : assert(iconTitle != null || title != null);
 
   static Widget createFlatButton(
@@ -40,13 +40,21 @@ class InformationAlertDialog extends StatelessWidget {
             iconTitle: iconTitle,
             title: title,
             message: message,
-            buttons: buttons,
+            buttons: (buttons != null) ? buttons : _createADefaultFlatButton(),
           )
         : InformationCupertinoAlertDialog(
             iconTitle: iconTitle,
             title: title,
             message: message,
-            buttons: buttons,
+            buttons: (buttons != null) ? buttons : _createADefaultFlatButton(),
           );
+  }
+
+  List<Widget> _createADefaultFlatButton() {
+    List<Widget> buttons = List<Widget>();
+    buttons.add(InformationAlertDialog.createFlatButton(
+      messageButton: 'OK',
+    ));
+    return buttons;
   }
 }

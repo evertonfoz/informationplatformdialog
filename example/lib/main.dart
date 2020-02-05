@@ -48,9 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 title: 'Não conseguimos',
                 message: 'Conteúdo',
-                buttons: [
-                  InformationAlertDialog.createFlatButton(messageButton: 'OK'),
-                ],
+                // buttons: [
+                //   InformationAlertDialog.createFlatButton(),
+                // ],
               ),
             );
           }),
